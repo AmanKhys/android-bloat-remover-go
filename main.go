@@ -11,6 +11,7 @@ func main() {
 	// Open the file for reading
 	file, err := os.Open("bloat.txt")
 	if err != nil {
+		println()
 		fmt.Println("Error:", err)
 		return
 	}
@@ -40,11 +41,11 @@ func main() {
 		} else {
 			fmt.Println("deleted : ", line)
 		}	
-
+		println()
 	}
 
 	// Check for any errors during scanning
 	if err := scanner.Err(); err != nil {
-		fmt.Println("Error:", err)
+		fmt.Println("Scan Error:", err)
 	}
 }
